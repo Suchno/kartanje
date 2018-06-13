@@ -1,0 +1,2229 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (269.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (359.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to CreateDepartures (20180612214024)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "departures" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "from" varchar, "to" varchar, "departureDate" date, "arrival" date, "numberOfTickets" integer, "idCompany" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180612214024_create_departures.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180612214024"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (249.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-12 21:41:44.491626"], ["updated_at", "2018-06-12 21:41:44.491626"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (241.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-12 23:42:51 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-12 23:48:52 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 771ms (Views: 769.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-12 23:49:19 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-12 23:54:21 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4430ms (Views: 4417.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-12 23:59:32 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 77ms (Views: 61.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 00:05:58 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (146.9ms)
+  Rendered departures/new.html.erb within layouts/application (151.3ms)
+Completed 500 Internal Server Error in 157ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `departuredate' for #<Departure:0x00007f492dade5f8>
+Did you mean?  departureDate
+               departureDate?
+               departureDate=
+               departureDate_was):
+    1: <%= simple_form_for @departure do |f| %>
+    2:   <%= f.input :from, as: :string, label: "City of departure"%>
+    3:   <%= f.input :to,  as: :string,label: "City of arrival"%>
+    4:   <%= f.input :departuredate, as: :date, label: "Date of departure"%>
+    5:   <%= f.input :arrival, as: :date, label: "Date of arrival"%>
+    6:   <%= f.input :numberOfTickets, as: :integer, label: "Number of tickets"%>
+    7:   <%= f.input :idCompany, as: :integer, label: "Id of company"%>
+  
+app/views/departures/_form.html.erb:4:in `block in _app_views_departures__form_html_erb__3444541287345011557_69976137519600'
+app/views/departures/_form.html.erb:1:in `_app_views_departures__form_html_erb__3444541287345011557_69976137519600'
+app/views/departures/new.html.erb:3:in `_app_views_departures_new_html_erb__46978843424713682_69976137805720'
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 00:06:14 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (271.5ms)
+  Rendered departures/new.html.erb within layouts/application (273.1ms)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `sumbit' for #<SimpleForm::FormBuilder:0x00007f49242ecda8>
+Did you mean?  submit):
+    5:   <%= f.input :arrival, as: :date, label: "Date of arrival"%>
+    6:   <%= f.input :numberOfTickets, as: :integer, label: "Number of tickets"%>
+    7:   <%= f.input :idCompany, as: :integer, label: "Id of company"%>
+    8:   <%= f.button :sumbit %>
+    9: <% end %>
+  
+app/views/departures/_form.html.erb:8:in `block in _app_views_departures__form_html_erb__3444541287345011557_69976156914500'
+app/views/departures/_form.html.erb:1:in `_app_views_departures__form_html_erb__3444541287345011557_69976156914500'
+app/views/departures/new.html.erb:3:in `_app_views_departures_new_html_erb__46978843424713682_69976156938740'
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 00:06:51 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (38.6ms)
+  Rendered departures/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 142ms (Views: 140.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 00:08:39 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xSJuDiPIbw+roFPV1cJxJ0XRl3csK1KSi3mY2h9DQcd2Ge3Qz7VtxeJu4/wqDv8uPWr27kQgtW1zrpA4F/wztQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2014", "departureDate(2i)"=>"3", "departureDate(3i)"=>"4", "arrival(1i)"=>"2015", "arrival(2i)"=>"2", "arrival(3i)"=>"18", "numberOfTickets"=>"10", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+Completed 500 Internal Server Error in 333ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `departure_param' for #<DeparturesController:0x00007f49181c9978>
+Did you mean?  departure_params
+               departure_path
+               departures_path
+               departure_url):
+  
+app/controllers/departures_controller.rb:8:in `create'
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 00:08:52 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xSJuDiPIbw+roFPV1cJxJ0XRl3csK1KSi3mY2h9DQcd2Ge3Qz7VtxeJu4/wqDv8uPWr27kQgtW1zrpA4F/wztQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2014", "departureDate(2i)"=>"3", "departureDate(3i)"=>"4", "arrival(1i)"=>"2015", "arrival(2i)"=>"2", "arrival(3i)"=>"18", "numberOfTickets"=>"10", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/departures_controller.rb:10:in `create'
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 00:09:03 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xSJuDiPIbw+roFPV1cJxJ0XRl3csK1KSi3mY2h9DQcd2Ge3Qz7VtxeJu4/wqDv8uPWr27kQgtW1zrpA4F/wztQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2014", "departureDate(2i)"=>"3", "departureDate(3i)"=>"4", "arrival(1i)"=>"2015", "arrival(2i)"=>"2", "arrival(3i)"=>"18", "numberOfTickets"=>"10", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:10
+  [1m[36mDeparture Create (0.4ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Split"], ["to", "Zagreb"], ["departureDate", "2014-03-04"], ["arrival", "2015-02-18"], ["numberOfTickets", 10], ["idCompany", 1], ["created_at", "2018-06-12 22:09:03.330157"], ["updated_at", "2018-06-12 22:09:03.330157"]]
+  ↳ app/controllers/departures_controller.rb:10
+  [1m[35m (86.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:10
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 87.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:09:03 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" ORDER BY "departures"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:11:54 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 00:12:00 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (13.1ms)
+  Rendered departures/new.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `notification_time' for nil:NilClass):
+    1: <%= simple_form_for @departure do |f| %>
+    2:   <%= f.input :from, as: :string, label: "City of departure"%>
+    3:   <%= f.input :to,  as: :string,label: "City of arrival"%>
+    4:   <%= f.input :departureDate, as: :date,:value => @form.notification_time.strftime("%d/%m/%Y - %H:%M %p"), :as => :string, label: "Date of departure"%>
+    5:   <%= f.input :arrival, as: :date, :value => @form.notification_time.strftime("%d/%m/%Y - %H:%M %p"), :as => :string, label: "Date of arrival"%>
+    6:   <%= f.input :numberOfTickets, as: :integer, label: "Number of tickets"%>
+    7:   <%= f.input :idCompany, as: :integer, label: "Id of company"%>
+  
+app/views/departures/_form.html.erb:4:in `block in _app_views_departures__form_html_erb__3444541287345011557_69976155509260'
+app/views/departures/_form.html.erb:1:in `_app_views_departures__form_html_erb__3444541287345011557_69976155509260'
+app/views/departures/new.html.erb:3:in `_app_views_departures_new_html_erb__46978843424713682_69976155515120'
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 00:13:11 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (11.8ms)
+  Rendered departures/new.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `departureDate' for nil:NilClass):
+    1: <%= simple_form_for @departure do |f| %>
+    2:   <%= f.input :from, as: :string, label: "City of departure"%>
+    3:   <%= f.input :to,  as: :string,label: "City of arrival"%>
+    4:   <%= f.input :departureDate, as: :date,:value => @form.departureDate.strftime("%d/%m/%Y - %H:%M %p"), :as => :string, label: "Date of departure"%>
+    5:   <%= f.input :arrival, as: :date, :value => @form.arrival.strftime("%d/%m/%Y - %H:%M %p"), :as => :string, label: "Date of arrival"%>
+    6:   <%= f.input :numberOfTickets, as: :integer, label: "Number of tickets"%>
+    7:   <%= f.input :idCompany, as: :integer, label: "Id of company"%>
+  
+app/views/departures/_form.html.erb:4:in `block in _app_views_departures__form_html_erb__3444541287345011557_69976147769760'
+app/views/departures/_form.html.erb:1:in `_app_views_departures__form_html_erb__3444541287345011557_69976147769760'
+app/views/departures/new.html.erb:3:in `_app_views_departures_new_html_erb__46978843424713682_69976148561680'
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 00:21:28 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (20.1ms)
+  Rendered departures/new.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 148ms (Views: 123.2ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 00:21:42 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpWOQ5pM5BP/yQ3eJLVP3T0mVwWeTNTce9+diWNWEX8xrg2ddjHm2bYHvffbecHURZ02nPZHMyODCJVra+ljDQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2014", "departureDate(2i)"=>"6", "departureDate(3i)"=>"3", "arrival(1i)"=>"2015", "arrival(2i)"=>"3", "arrival(3i)"=>"17", "numberOfTickets"=>"13", "idCompany"=>"2"}, "commit"=>"Create Departure"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:11
+  [1m[36mDeparture Create (1.0ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Split"], ["to", "Zagreb"], ["departureDate", "2014-06-03"], ["arrival", "2015-03-17"], ["numberOfTickets", 13], ["idCompany", 2], ["created_at", "2018-06-12 22:21:42.838006"], ["updated_at", "2018-06-12 22:21:42.838006"]]
+  ↳ app/controllers/departures_controller.rb:11
+  [1m[35m (165.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:11
+Redirected to http://localhost:3000/
+Completed 302 Found in 174ms (ActiveRecord: 166.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:21:43 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:10
+  Rendered departures/index.html.erb within layouts/application (439.6ms)
+Completed 500 Internal Server Error in 443ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00007f492d4718a0>:0x00007f49281d4638>):
+     9: </tr>
+    10: <%= @departures.each do |departure| %>
+    11:   <tr>
+    12:     <td><%= book.from %></td>
+    13:     <td><%= book.to %></td>
+    14:     <td><%= book.departureDate %></td>
+    15:     <td><%= book.arrival %></td>
+  
+app/views/departures/index.html.erb:12:in `block in _app_views_departures_index_html_erb___1231726307648811767_69976091174820'
+app/views/departures/index.html.erb:10:in `_app_views_departures_index_html_erb___1231726307648811767_69976091174820'
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:22:43 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:10
+  Rendered departures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:23:45 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.8ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:25:08 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:25:45 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:25:49 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:26:19 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:26:42 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 302ms (Views: 295.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 00:27:00 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 12:34:46 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (298.5ms)
+  Rendered departures/new.html.erb within layouts/application (322.2ms)
+Completed 200 OK in 880ms (Views: 825.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 12:35:01 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8h4PESf16XaSDSSpPNKABaT5iRPOL+XPEw+tq9MEvgKG+gTJR9gM9RMmZDBC7VWMzHOBmDkWOQNBj0azz6cC6Q==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2015", "departureDate(2i)"=>"6", "departureDate(3i)"=>"13", "arrival(1i)"=>"2018", "arrival(2i)"=>"4", "arrival(3i)"=>"13", "numberOfTickets"=>"10", "idCompany"=>"2"}, "commit"=>"Create Departure"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:11
+  [1m[36mDeparture Create (0.7ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Split"], ["to", "Zagreb"], ["departureDate", "2015-06-13"], ["arrival", "2018-04-13"], ["numberOfTickets", 10], ["idCompany", 2], ["created_at", "2018-06-13 10:35:01.578044"], ["updated_at", "2018-06-13 10:35:01.578044"]]
+  ↳ app/controllers/departures_controller.rb:11
+  [1m[35m (115.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:11
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 116.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:35:01 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 68ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:35:17 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:35:35 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:37:32 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:38:35 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:39:29 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:11
+  Rendered departures/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:42:07 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:14
+  Rendered departures/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:42:52 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:16
+  Rendered departures/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:43:15 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:16
+  Rendered departures/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:43:32 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.5ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:16
+  Rendered departures/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 12:44:18 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:44:21 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:44:22 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:45:47 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:47:05 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:47:11 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:47:50 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:58:01 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 12:59:52 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:18: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+...k_to, departure_path(departure)
+...                               ^
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:19: syntax error, unexpected '<'
+        <th scope="row"><%= departure.id );@output_buf...
+                        ^
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/departures/index.html.erb:18: syntax error, unexpected '\n', expecting &. or :: or '[' or '.'
+app/views/departures/index.html.erb:19: syntax error, unexpected '<'
+app/views/departures/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+app/views/departures/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/departures/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:00:20 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:18: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+...to, departure_path(departure) );@output_buffer.safe_append='
+...                              ^
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/departures/index.html.erb:18: syntax error, unexpected ')', expecting &. or :: or '[' or '.'
+app/views/departures/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+app/views/departures/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/departures/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:00:58 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:01:06 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:01:08 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:01:09 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:01:09 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:01:26 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:19: syntax error, unexpected '<', expecting ')'
+        <th scope="row"><%= departure....
+        ^
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:19: syntax error, unexpected '<'
+        <th scope="row"><%= departure.id );@output_buf...
+                        ^
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/departures/index.html.erb:19: syntax error, unexpected '<', expecting ')'
+app/views/departures/index.html.erb:19: syntax error, unexpected '<'
+app/views/departures/index.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+app/views/departures/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/departures/index.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:02:45 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:02:47 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.6ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (236.1ms)
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `departure' for #<#<Class:0x00007f6b2e434ab8>:0x00007f6b24265778>
+Did you mean?  @departure):
+    1: <div class="container">
+    2:   <div class="table-of-contents">
+    3:     <h2 scope="row"><%= departure.id %></h2>
+    4:     <h2><%= departure.from %></h2>
+    5:     <h2><%= departure.to %></h2>
+    6:     <h2><%= departure.departureDate %></h2>
+  
+app/views/departures/show.html.erb:3:in `_app_views_departures_show_html_erb__4422856642545493921_70049072361540'
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:03:39 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 62.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:04:29 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:06:03 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/home/frina/RubymineProjects/Kartanje/app/views/departures/show.html.erb:10: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...end=( link_to "Buy",root_path :class => 'btn');@output_buffe...
+...                              ^):
+  
+app/views/departures/show.html.erb:10: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:06:18 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:06:38 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:06:41 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:06:50 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:07:21 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:07:31 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:07:59 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:08:01 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:08:14 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:08:20 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:08:53 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:09:19 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:09:46 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  Rendered departures/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/frina/RubymineProjects/Kartanje/app/views/departures/index.html.erb:28: syntax error, unexpected ':', expecting ')'
+...e", departure_path(departure) :class => "btn btn-info" );@ou...
+...                              ^):
+  
+app/views/departures/index.html.erb:28: syntax error, unexpected ':', expecting ')'
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:09:54 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:10:05 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:10:41 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:27
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:16:56 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/departures/3" for 127.0.0.1 at 2018-06-13 13:17:07 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (1.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 67ms (Views: 62.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/departures/3/edit" for 127.0.0.1 at 2018-06-13 13:17:25 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (14.7ms)
+  Rendered departures/edit.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:17:32 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:18:03 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/3/edit" for 127.0.0.1 at 2018-06-13 13:18:05 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (24.2ms)
+  Rendered departures/edit.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 66ms (Views: 63.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/2/edit" for 127.0.0.1 at 2018-06-13 13:18:07 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (21.8ms)
+  Rendered departures/edit.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 74ms (Views: 71.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/1/edit" for 127.0.0.1 at 2018-06-13 13:18:09 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (23.6ms)
+  Rendered departures/edit.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/1/edit" for 127.0.0.1 at 2018-06-13 13:18:11 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (17.7ms)
+  Rendered departures/edit.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/departures/2/edit" for 127.0.0.1 at 2018-06-13 13:18:13 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (15.3ms)
+  Rendered departures/edit.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/3/edit" for 127.0.0.1 at 2018-06-13 13:18:16 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (18.2ms)
+  Rendered departures/edit.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:22:49 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:23:08 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:18
+  Rendered departures/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:23:35 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:24:00 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:25:06 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/departures/3" for 127.0.0.1 at 2018-06-13 13:25:11 +0200
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"86tIyV/3gUMJ40XhhzPaGK4eW4yconmj+krZ/1+TBOOHT0MRP9pkwIjIBXj5DA+RxpRTB2ubpW+oyjLnQzC4CA==", "id"=>"3"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/departures_controller.rb:26:in `destroy'
+Started DELETE "/departures/3" for 127.0.0.1 at 2018-06-13 13:25:47 +0200
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"86tIyV/3gUMJ40XhhzPaGK4eW4yconmj+krZ/1+TBOOHT0MRP9pkwIjIBXj5DA+RxpRTB2ubpW+oyjLnQzC4CA==", "id"=>"3"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[36mDeparture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "departures" WHERE "departures"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[35m (82.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+No template found for DeparturesController#destroy, rendering head :no_content
+Completed 204 No Content in 111ms (ActiveRecord: 83.4ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:25:50 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures" for 127.0.0.1 at 2018-06-13 13:26:22 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/departures/1" for 127.0.0.1 at 2018-06-13 13:26:24 +0200
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"74Kb1CWqMAmcm+uK9+gzUrP2jU7oIuW80DjbsU8BJG2bZpAMRYfVih2wqxOJ1+bb23yFxR8bOXCCuDCpU6KYhg==", "id"=>"1"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[36mDeparture Destroy (0.7ms)[0m  [1m[31mDELETE FROM "departures" WHERE "departures"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[35m (110.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms (ActiveRecord: 111.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:26:25 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 13:26:29 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (14.4ms)
+  Rendered departures/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 13:26:39 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PndgOwngSvbfxV+mlE/DhAk1xoOPJjiN+hc70+rCxW+XdiBiYSsasVpKx6ffEMNUXgj2rofRRp+4weL0DtMUcQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"13", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"13", "numberOfTickets"=>"30", "idCompany"=>"3"}, "commit"=>"Create Departure"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[36mDeparture Create (0.8ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Split"], ["to", "Zagreb"], ["departureDate", "2018-06-13"], ["arrival", "2018-06-13"], ["numberOfTickets", 30], ["idCompany", 3], ["created_at", "2018-06-13 11:26:39.051750"], ["updated_at", "2018-06-13 11:26:39.051750"]]
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[35m (186.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 191ms (ActiveRecord: 187.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:26:39 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateUsers (20180613114126)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180613114126_devise_create_users.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180613114126_devise_create_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20180613114126_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20180613114126_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180613114126"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (104.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to DeviseCreateCompanies (20180613114216)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180613114216_devise_create_companies.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "companies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180613114216_devise_create_companies.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_companies_on_email" ON "companies" ("email")[0m
+  ↳ db/migrate/20180613114216_devise_create_companies.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_companies_on_reset_password_token" ON "companies" ("reset_password_token")[0m
+  ↳ db/migrate/20180613114216_devise_create_companies.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180613114216"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (119.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:42:40 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 276ms (Views: 262.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/departures/4" for 127.0.0.1 at 2018-06-13 13:44:13 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 56ms (Views: 36.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/4/edit" for 127.0.0.1 at 2018-06-13 13:44:16 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (92.6ms)
+  Rendered departures/edit.html.erb within layouts/application (94.3ms)
+Completed 200 OK in 134ms (Views: 131.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:47:51 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:47:53 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:47:54 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 60ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/4" for 127.0.0.1 at 2018-06-13 13:48:20 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 52ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/4/edit" for 127.0.0.1 at 2018-06-13 13:48:23 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (15.8ms)
+  Rendered departures/edit.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 75ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/4" for 127.0.0.1 at 2018-06-13 13:48:26 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 62ms (Views: 58.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:48:26 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/4" for 127.0.0.1 at 2018-06-13 13:49:35 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departures/4/edit" for 127.0.0.1 at 2018-06-13 13:49:37 +0200
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (20.7ms)
+  Rendered departures/edit.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 78ms (Views: 74.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/4" for 127.0.0.1 at 2018-06-13 13:49:40 +0200
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:19
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:49:40 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:49:44 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/departures/4" for 127.0.0.1 at 2018-06-13 13:49:46 +0200
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"082fruxetO2vvyIzMtolkVitpB4buhbRp/zZcRF3krGnKZR2jHNRbi6UYqpM5fAYMCesleyDyh31fDJpDdQuWg==", "id"=>"4"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[36mDeparture Destroy (0.6ms)[0m  [1m[31mDELETE FROM "departures" WHERE "departures"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[35m (101.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 107ms (ActiveRecord: 102.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 13:49:46 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:07:18 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:07:19 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 102ms (Views: 86.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:11:20 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:11:21 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.6ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:13:54 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 14:14:00 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:14:04 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 14:14:06 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:14:06 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:14:08 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 65ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:15:52 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:16:16 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:17:16 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:20:07 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:20:10 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 60ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-13 14:20:11 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 75ms (Views: 53.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 14:20:12 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 78ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for 127.0.0.1 at 2018-06-13 14:20:13 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-13 14:20:14 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-13 14:20:15 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:20:15 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 83ms (Views: 81.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-13 14:20:16 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 77ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:20:31 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:23:22 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:23:44 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-06-13 14:23:54 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LhAoBW+BYKprEkF1K6XOw+8Yb/pzM0W8TpFO1uBpvbOw5K1J0DWWZVFcrChjEOIfKwcKQTEW1PeNbVOaNsIiqA==", "user"=>{"email"=>"mateMatic@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matematic@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "matematic@gmail.com"], ["encrypted_password", "$2a$11$JhAQ1PL/M3kB60lJrjlo2Ol1gZAmsP9Z4CEGhp/5olpWN1dcUBYwy"], ["created_at", "2018-06-13 12:23:54.879133"], ["updated_at", "2018-06-13 12:23:54.879133"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (95.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-06-13 12:23:54.978620"], ["last_sign_in_at", "2018-06-13 12:23:54.978620"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-06-13 12:23:54.979214"], ["id", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (55.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 429ms (ActiveRecord: 152.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:23:55 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:19
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:24:12 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-06-13 14:24:29 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R7mB6FiRHCEIQbIK5HMCuaqOIQTRZQvqpaHsFOT2ZrwzXYowOLz5oolq8pOaTNcwwgQpjyZc1yb3IQcM+FXaVw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:24:29 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-13 14:25:04 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies" for 127.0.0.1 at 2018-06-13 14:25:22 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q9y1SJ+pI/46gi+rAjnzvrl2yZHpg5mStxgv0E/jM/Y1+W9YkkSueSLijSz82kzJoNXJduPD9hyUKGI9hZRo8A==", "company"=>{"email"=>"cazmatrans@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "companies" WHERE "companies"."email" = ? LIMIT ?[0m  [["email", "cazmatrans@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Create (0.7ms)[0m  [1m[32mINSERT INTO "companies" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "cazmatrans@gmail.com"], ["encrypted_password", "$2a$11$KFhO8.wKH/0MDDa/oTza8.ucfBj3BY9Cy.x53B5.19r3CRoXqecAG"], ["created_at", "2018-06-13 12:25:22.901126"], ["updated_at", "2018-06-13 12:25:22.901126"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (74.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Update (0.4ms)[0m  [1m[33mUPDATE "companies" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "companies"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-06-13 12:25:22.979992"], ["last_sign_in_at", "2018-06-13 12:25:22.979992"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-06-13 12:25:22.981230"], ["id", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (70.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 332ms (ActiveRecord: 146.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:25:23 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:31
+  Rendered departures/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/departures/2" for 127.0.0.1 at 2018-06-13 14:25:41 +0200
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M4xPjd2J2uCLQdJsnYk/ae3oemNVURDpiS6Z67y46K7IIR4DFJudIN+Rgt0qDDPy24zVi8wHFw9/dXnn6SEJhQ==", "id"=>"2"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[36mDeparture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "departures" WHERE "departures"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[35m (102.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 106ms (ActiveRecord: 102.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:25:41 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+Migrating to AddpriceToDeparture (20180613122930)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180613122930"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (99.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-13 14:31:39 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.7ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 68ms (Views: 55.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-13 14:31:41 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:31:41 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/companies/sign_out" for 127.0.0.1 at 2018-06-13 14:31:44 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8R4KHzkjxNqxcWBi8dTr3hHR6uzQzMszebQKcyfZixQKs1uR8DGDGuWhMNNGUedFJ7VFBEmazNWP7+p/ckBqPw=="}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:31:44 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/companies/sign_in" for 127.0.0.1 at 2018-06-13 14:31:57 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies/sign_in" for 127.0.0.1 at 2018-06-13 14:32:02 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lRy37xE1CpUqVMvoBFYw0yVROmjmhralP9fgjrPw1CsgLlgW9J5OuM2aHzGbkDsRt4kLKohiNQIJKRGF8ewHgw==", "company"=>{"email"=>"cazmatrans@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCompany Load (0.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."email" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["email", "cazmatrans@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Update (0.8ms)[0m  [1m[33mUPDATE "companies" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "companies"."id" = ?[0m  [["current_sign_in_at", "2018-06-13 12:32:03.224834"], ["sign_in_count", 2], ["updated_at", "2018-06-13 12:32:03.225610"], ["id", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (76.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 317ms (ActiveRecord: 78.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:32:03 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 14:33:28 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (14.7ms)
+  Rendered departures/new.html.erb within layouts/application (15.7ms)
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:24
+Completed 200 OK in 74ms (Views: 61.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:36:11 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 78ms (Views: 76.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 14:36:11 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/_form.html.erb:7
+  Rendered departures/_form.html.erb (90.2ms)
+  Rendered departures/new.html.erb within layouts/application (91.7ms)
+Completed 200 OK in 137ms (Views: 135.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 14:36:20 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZOF0AsOlTswIuq8hgFlP56lGUXJP+l1y4PpFyrZhnEJMqURACCZWo/+zN7tzaYPs8kqIV5yh+Cv4xgZ8e7zCXQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"13", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"13", "numberOfTickets"=>"20", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[36mDeparture Create (0.7ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Split"], ["to", "Zagreb"], ["departureDate", "2018-06-13"], ["arrival", "2018-06-13"], ["numberOfTickets", 20], ["idCompany", 1], ["created_at", "2018-06-13 12:36:20.162088"], ["updated_at", "2018-06-13 12:36:20.162088"]]
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[35m (156.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 161ms (ActiveRecord: 157.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:36:20 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:31
+  Rendered departures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 14:36:24 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/_form.html.erb:7
+  Rendered departures/_form.html.erb (29.8ms)
+  Rendered departures/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 14:36:49 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aS97mV+EJLj4e+GRUzwBHKpuoQOK/tZHE4Ta1lGVbQFBZ0vblAc81w9yeQugDM0X8WJ4Jlmlcx4LuJlgnEgzHg==", "departure"=>{"from"=>"Zagreb", "to"=>"Split", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"13", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"13", "numberOfTickets"=>"25", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[36mDeparture Create (0.4ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Zagreb"], ["to", "Split"], ["departureDate", "2018-06-13"], ["arrival", "2018-06-13"], ["numberOfTickets", 25], ["idCompany", 1], ["created_at", "2018-06-13 12:36:49.964924"], ["updated_at", "2018-06-13 12:36:49.964924"]]
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[35m (166.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 173ms (ActiveRecord: 166.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:36:50 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:31
+  Rendered departures/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/departures/5" for 127.0.0.1 at 2018-06-13 14:38:17 +0200
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HIcEQEfLkjX1LOa8BdkL6O8YOrHK1kdmfikdULBsDu+tuNzLbzO0mY6/kGSE8x3N4/NtPviIfgNa3/WlfIHdVA==", "id"=>"5"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[36mDeparture Destroy (0.3ms)[0m  [1m[31mDELETE FROM "departures" WHERE "departures"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[35m (84.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 91ms (ActiveRecord: 85.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:38:17 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:31
+  Rendered departures/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/departures/6" for 127.0.0.1 at 2018-06-13 14:38:19 +0200
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fF5JBWLU+fGBUJguDU4QcDjoLh9Cv8kKMfkcv/SQrUnNYZGOSizfXfrD7vaMZAZVNAN5kHDh8G8VD/RKOH1+8g==", "id"=>"6"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:43
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[36mDeparture Destroy (0.2ms)[0m  [1m[31mDELETE FROM "departures" WHERE "departures"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/departures_controller.rb:26
+  [1m[35m (92.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:26
+Redirected to http://localhost:3000/
+Completed 302 Found in 97ms (ActiveRecord: 92.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:38:19 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:39:44 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-13 14:39:46 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:39:46 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 49ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/companies/sign_out" for 127.0.0.1 at 2018-06-13 14:39:48 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Pg8rlar3KnbjQ/h1IN0Cz4KPgX4SVZVcZDm77lzETi2PMPMegg8M2pjQjq2h9xTqjmTW8SALrDlAz1MbkCmdlg=="}
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:39:48 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-13 14:39:49 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies" for 127.0.0.1 at 2018-06-13 14:40:09 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jkoh3/3nzcmexbgxgioPwVS95MwfRLGlTtebCEBUb+510TqP1n9uulQis1Mnn3yp/OviZ4wWOHT0IF3EKpixaQ==", "company"=>{"email"=>"prijevozMakarska@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "companies" WHERE "companies"."email" = ? LIMIT ?[0m  [["email", "prijevozmakarska@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Create (0.8ms)[0m  [1m[32mINSERT INTO "companies" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "prijevozmakarska@gmail.com"], ["encrypted_password", "$2a$11$saPr1ME6VPVyvGgAVrM4Ye4chN2BEjnOq53ejZpJFxNb3DGd6CQwG"], ["created_at", "2018-06-13 12:40:10.016869"], ["updated_at", "2018-06-13 12:40:10.016869"]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (86.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Update (0.2ms)[0m  [1m[33mUPDATE "companies" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "companies"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-06-13 12:40:10.106404"], ["last_sign_in_at", "2018-06-13 12:40:10.106404"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2018-06-13 12:40:10.107013"], ["id", 2]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (75.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 340ms (ActiveRecord: 162.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:40:10 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:39
+  Rendered departures/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 14:40:21 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/_form.html.erb:7
+  Rendered departures/_form.html.erb (19.5ms)
+  Rendered departures/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 14:40:27 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cZL+UdUMGv7gpP6VNPEypbhHBbICNVfVWJH5p0joUHS9gT3EA+R4rkCoaiugEz4xI+0muUM2NPtFLsMKHwVxCA==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"13", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"13", "numberOfTickets"=>"2", "idCompany"=>"2"}, "commit"=>"Create Departure"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[36mDeparture Create (0.7ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Split"], ["to", "Zagreb"], ["departureDate", "2018-06-13"], ["arrival", "2018-06-13"], ["numberOfTickets", 2], ["idCompany", 2], ["created_at", "2018-06-13 12:40:27.158472"], ["updated_at", "2018-06-13 12:40:27.158472"]]
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[35m (187.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 192ms (ActiveRecord: 188.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:40:27 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:31
+  Rendered departures/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/companies/sign_out" for 127.0.0.1 at 2018-06-13 14:40:32 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"P/WrDc069dm/KvoNcv6h5ZnIoeKX6nLZIbHLhMZb+ae0/zNisitaFwhk4zFEn3YZwLgxEjeT7dM/LhUPlwNNLA=="}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:40:32 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  Rendered departures/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/companies/sign_in" for 127.0.0.1 at 2018-06-13 14:40:34 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies/sign_in" for 127.0.0.1 at 2018-06-13 14:40:39 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X3i6RgoRGD/8TDZSQHOpiw1P+hp6DEBQmAEp/2wjdTmy4xFsjZLN6B5QpedwDcvMUfKfkLmRlJbsBvNZBiSIyw==", "company"=>{"email"=>"cazmatrans@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."email" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["email", "cazmatrans@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Update (0.6ms)[0m  [1m[33mUPDATE "companies" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "companies"."id" = ?[0m  [["current_sign_in_at", "2018-06-13 12:40:40.164860"], ["last_sign_in_at", "2018-06-13 12:32:03.224834"], ["sign_in_count", 3], ["updated_at", "2018-06-13 12:40:40.165568"], ["id", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (82.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 260ms (ActiveRecord: 82.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:40:40 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:31
+  Rendered departures/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-13 14:40:46 +0200
+Processing by DeparturesController#new as HTML
+  Rendering departures/new.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/_form.html.erb:7
+  Rendered departures/_form.html.erb (20.3ms)
+  Rendered departures/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-13 14:40:54 +0200
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XACoYBVqstUG+4pl4zx7iKl398p3ZAn4Wo8i6neWByhT27I8mZUfbiga6eT6D8AwIJP4UoZ0qXOP6pkHFXuTcQ==", "departure"=>{"from"=>"Zagreb", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"13", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"13", "numberOfTickets"=>"2", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[36mDeparture Create (0.8ms)[0m  [1m[32mINSERT INTO "departures" ("from", "to", "departureDate", "arrival", "numberOfTickets", "idCompany", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["from", "Zagreb"], ["to", "Zagreb"], ["departureDate", "2018-06-13"], ["arrival", "2018-06-13"], ["numberOfTickets", 2], ["idCompany", 1], ["created_at", "2018-06-13 12:40:54.490057"], ["updated_at", "2018-06-13 12:40:54.490057"]]
+  ↳ app/controllers/departures_controller.rb:12
+  [1m[35m (188.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:12
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 189.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:40:54 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:17
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:31
+  Rendered departures/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:41:21 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:16
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  Rendered departures/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/companies/sign_out" for 127.0.0.1 at 2018-06-13 14:41:24 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p+Xa7bofaCfQjKeRCN7zDSYRH24CTJhM4Q0nhl6JkbItXVzzW8TqAo4PI3+Mn1+L6FasfeqCKWu7SiQxRyzc8A=="}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-13 14:41:24 +0200
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT "departures".* FROM "departures" ORDER BY created_at DESC[0m
+  ↳ app/views/departures/index.html.erb:16
+  Rendered departures/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.2ms)
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kartanje</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to "SKK BUy",root_path, :class => "navbar-brand"%>
+
+        <ul class="nav navbar-nav float-right">
+          <li class="float-right"><%= link_to "New user", new_user_registration_path %></li>
+          <li class="float-right"><%= link_to "New company", new_company_registration_path %></li>
+          <% if user_signed_in? %>
+            <li class="float-right"><%= link_to"Sign out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li class="float-right"><%= link_to"Log in as user", new_user_session_path%></li>
+          <% end %>
+          <% if company_signed_in? %>
+            <li class="float-right"><%= link_to"Sign out", destroy_company_session_path, method: :delete %></li>
+          <% else %>
+            <li class="float-right"><%= link_to"Log in as company", new_company_session_path%></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

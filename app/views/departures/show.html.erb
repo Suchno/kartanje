@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="text-center">
+    <h2 scope="row"><%= @departure.id %></h2>
+    <h2><%= @departure.from %></h2>
+    <h2><%= @departure.to %></h2>
+    <h2><%= @departure.departureDate %></h2>
+    <h2><%= @departure.arrival %></h2>
+    <h2><%= @departure.numberOfTickets %></h2>
+    <h2><%= @departure.idCompany %></h2>
+    <%= link_to "Back",root_path, :class => "btn btn-warning"%>
+    <%= link_to "Buy",root_path, :class => "btn btn-primary"%>
+  </div>
+</div>
