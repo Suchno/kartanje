@@ -3,15 +3,17 @@
 one:
   from: MyString
   to: MyString
-  departureDate: 2018-06-12
-  arrival: 2018-06-12
+  departureDate: 2018-06-14 20:14:28
+  arrival: 2018-06-14 20:14:28
   numberOfTickets: 1
   idCompany: 1
+  price: 1
 
 two:
   from: MyString
   to: MyString
-  departureDate: 2018-06-12
-  arrival: 2018-06-12
+  departureDate: 2018-06-14 20:14:28
+  arrival: 2018-06-14 20:14:28
   numberOfTickets: 1
   idCompany: 1
+  price: 1

@@ -1,9 +1,13 @@
-<%= simple_form_for @departure do |f| %>
-  <%= f.input :from, as: :string, label: "City of departure"%>
-  <%= f.input :to,  as: :string,label: "City of arrival"%>
-  <%= f.input :departureDate, as: :date, label: "Date of departure"%>
-  <%= f.input :arrival, as: :date, label: "Date of arrival"%>
-  <%= f.input :numberOfTickets, as: :integer, label: "Number of tickets"%>
-  <%= f.input :idCompany, :as => :hidden, :input_html => { :value => current_company.id } %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <h1>New departure</h1>
+  <%= simple_form_for @departure do |f| %>
+    <%= f.input :from, as: :string, label: "City of departure"%>
+    <%= f.input :to,  as: :string,label: "City of arrival"%>
+    <%= f.input :departureDate, as: :datetime, label: "Date of departure"%>
+    <%= f.input :arrival, as: :datetime, label: "Date of arrival"%>
+    <%= f.input :numberOfTickets, as: :integer, label: "Number of tickets"%>
+    <%= f.input :price, as: :integer, label: "Price" %>
+    <%= f.input :idCompany, :as => :hidden, :input_html => { :value => current_company.id } %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

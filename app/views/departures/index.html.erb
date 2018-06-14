@@ -8,6 +8,7 @@
       <th scope="col">Datum Polaska</th>
       <th scope="col">Datum Dolaska</th>
       <th scope="col">Broj Karata</th>
+      <th scope="col">Cijena</th>
       <th scope="col">Prijevoznik</th>
       <th scope="col"></th>
     </tr>
@@ -20,11 +21,11 @@
         <td><%= departure.departureDate %></td>
         <td><%= departure.arrival %></td>
         <td><%= departure.numberOfTickets %></td>
-        <td><%= departure.idCompany %></td>
+        <td><%= departure.price %></td>
+        <td><%= @companies.find(departure.idCompany).name %></td>
         <td>
           <% if user_signed_in? %>
-            <%= link_to "Buy",root_path, :class => "btn btn-success" %>
-            <%= link_to "More", departure_path(departure), :class => "btn btn-info" %>
+            <%= link_to "Buy",departure_path(departure), :class => "btn btn-success" %>
           <% end %>
           <% if company_signed_in? and departure.idCompany == current_company.id%>
             <%= link_to "Edit", edit_departure_path(departure), :class => "btn btn-primary" %>
