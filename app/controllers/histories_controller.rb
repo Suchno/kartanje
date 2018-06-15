@@ -1,5 +1,7 @@
+#controller for user history. Bought reservations
 class HistoriesController < ApplicationController
   before_action :find_entry, only: [:destroy]
+  # action for showing user reservation.
   def index
     if user_signed_in?
       @histories = History.where(idUser: current_user.id).order("")
@@ -17,6 +19,7 @@ class HistoriesController < ApplicationController
     end
 
   end
+  #action for deleting user registration.
   def destroy
     @departure = Departure.find(@history.idDeparture)
     numberOfTickets = @departure.numberOfTickets
@@ -26,6 +29,7 @@ class HistoriesController < ApplicationController
     flash[:success] = "Your have successfully removed your reservation"
     redirect_to action: "index"
   end
+  #private method for fing the actual entry in History model(user can have many reservations for same departure)to have it deleted.
   private
 
     def find_entry
