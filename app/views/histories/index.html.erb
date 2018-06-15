@@ -20,7 +20,7 @@
         <td><%= value.arrival %></td>
         <td><%= value.price %></td>
         <td><%= @companies.find(value.idCompany).name %></td>
-        <% if (value.departureDate - DateTime.now) >= 1%>
+        <% if (value.departureDate - DateTime.now.in_time_zone("Berlin")) >= 3600%>
           <td>
             <%= link_to "Return my money", history_path(key),method: :delete, :class => "btn btn-primary", data: {confirm: "Are you sure about that"}%>
           </td>

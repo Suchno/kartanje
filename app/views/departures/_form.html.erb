@@ -1,10 +1,10 @@
 <%= simple_form_for @departure do |f| %>
-    <%= f.input :from, as: :string, label: "City of departure"%>
-    <%= f.input :to,  as: :string,label: "City of arrival"%>
-    <%= f.input :departureDate, as: :datetime, label: "Date of departure"%>
-    <%= f.input :arrival, as: :datetime, label: "Date of arrival"%>
-    <%= f.input :numberOfTickets, as: :integer, label: "Number of tickets"%>
-    <%= f.input :price, as: :integer, label: "Price" %>
+    <%= f.input :from,required: true, as: :string, label: "City of departure"%>
+    <%= f.input :to,required: true,  as: :string,label: "City of arrival"%>
+    <%= f.input :departureDate,required: true, as: :datetime, label: "Date of departure"%>
+    <%= f.input :arrival, as: :datetime,required: true, label: "Date of arrival"%>
+    <%= f.input :numberOfTickets,required: true, as: :integer, label: "Number of tickets"%>
+    <%= f.input :price,required: true, as: :integer, label: "Price" %>
     <%= f.input :idCompany, :as => :hidden, :input_html => { :value => current_company.id } %>
     <%= f.button :submit %>
 <% end %>

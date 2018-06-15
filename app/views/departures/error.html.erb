@@ -1,8 +1,31 @@
 <div class="container">
-  <div class="alert alert-danger">
-    <strong>Error!</strong> You cannot buy a ticket couse there are 0 tickets left :(.
-  </div>
-  <div class="text-center">
-    <%= link_to "Back",root_path, :class => "btn btn-warning"%>
-  </div>
+  <% if errorType == "c"%>
+    <div class="alert alert-danger">
+      <strong>Error!</strong> Your date of departure must be larger than you arrival date. Your price must be greater then 0 so as your number of tickets. Try again :)
+    </div>
+    <div class="text-center">
+      <%= link_to "Back",new_departure_path, :class => "btn btn-warning"%>
+    </div>
+  <% elsif errorType == "n" %>
+    <div class="alert alert-danger">
+      <strong>Error!</strong> You cannot buy a ticket couse there are 0 tickets left :(.
+    </div>
+    <div class="text-center">
+      <%= link_to "Back",root_path, :class => "btn btn-warning"%>
+    </div>
+   <% elsif errorType == "b" %>
+    <div class="alert alert-danger">
+      <strong>Error!</strong> You cannot edit departure for which people have already have bought tickets :(.
+    </div>
+    <div class="text-center">
+      <%= link_to "Back",root_path, :class => "btn btn-warning"%>
+    </div>
+  <% elsif errorType == "d" %>
+    <div class="alert alert-danger">
+      <strong>Error!</strong> You cannot delete departure for which people have already have bought tickets :(.
+    </div>
+    <div class="text-center">
+      <%= link_to "Back",root_path, :class => "btn btn-warning"%>
+    </div>
+  <% end %>
 </div>

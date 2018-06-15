@@ -52,8 +52,8 @@ SimpleForm.setup do |config|
   config.wrappers :vertical_form, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
     b.use :html5
     b.use :placeholder
-    b.optional :maxlength
-    b.optional :minlength
+    b.use :maxlength
+    b.use :minlength
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly

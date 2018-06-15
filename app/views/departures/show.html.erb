@@ -29,7 +29,7 @@
       </div>
       <div class="row">
         <div class="pull-left">
-          <label>Company:</label><h4><%= @companies.find(@departure.idCompany).name %></h4>
+          <label>Company:</label><h4><%= @company.name %></h4>
         </div>
       </div>
       <div class="row">
@@ -50,12 +50,12 @@
       <div class="text-center">
         <%= simple_form_for @card, :url => buy_path(@departure), :html => { :method => "post" } do |f| %>
           <%= f.error_notification %>
-          <div class="form-inputs">
+          <div class="control-group">
             <%= f.input :idUser, :as => :hidden, :input_html => { :value => current_user.id } %>
-            <%= f.input :cardNumber,required: true, autofocus:true, as: :integer, label: "Your card number", min_length:13,max_length:19%>
+            <%= f.text_field :cardNumber, as: :integer,required:true, autofocus:true,:pattern =>  '^\d{13,19}$',placeholder:"Card number(13 or 19 numbers)",:input_html => {:style=> 'width: 100%;'} %>
           </div>
           <div class="form-actions">
-            <%= f.button :submit, "Buy",:class => "btn btn-success" %>
+            <%= f.button :submit, "Buy",:class => "btn btn-success",data: {success:"Your card have been booked, you can see it in your historyd"} %>
           </div>
         <% end %>
       </div>
