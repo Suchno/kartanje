@@ -1,33 +1,63 @@
-<div class="container" style="border:black">
-  <div class="text-center">
+<div class="container">
+  <div class="border border-dark" style="border:black">
     <div class="row">
-      <h3>You are buying a card for:</h3>
-    </div>
-    <div class="row">
-      <label>From:</label><h2><%= @departure.from %></h2>
-      <label>To:</label><h2><%= @departure.to %></h2>
-    </div>
-    <div class="row">
-      <label>Departure time:</label><h2><%= @departure.departureDate %></h2>
-      <label>Departure arrival:</label><h2><%= @departure.arrival %></h2>
-    </div>
-    <div class="row">
-      <label>Company:</label><h2><%= @companies.find(@departure.idCompany).name %></h2>
-    </div>
-    <div class="row">
-      <label>Price:</label><h2><%= @departure.price %></h2>
-    </div>
-    <div class="row">
-      <label>Your name:</label><h2><%= current_user.name %></h2>
-      <label>Your email:</label><h2><%= current_user.email %></h2>
-    </div>
-    <div class="row">
-      <label>Enter your card number: </label><input type="number">
-    </div>
-    <div class="row">
-      <%= link_to "Back",root_path, :class => "btn btn-warning"%>
-      <%= button_to "Buy",buy_path(@departure), :class => "btn btn-primary"%>
+      <div class="pull-left">
+        <%= link_to "Back",root_path, :class => "btn btn-warning"%>
+      </div>
     </div>
 
+      <div class="row">
+        <div class="pull-left">
+          <h3>You are buying a card for:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pull-left">
+          <label>From:</label><h4><%= @departure.from %></h4>
+        </div>
+        <div class="pull-right">
+          <label>To:</label><h4><%= @departure.to %></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pull-left">
+          <label>Departure time:</label><h4><%= @departure.departureDate %></h4>
+        </div>
+        <div class="pull-right">
+          <label>Departure arrival:</label><h4><%= @departure.arrival %></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pull-left">
+          <label>Company:</label><h4><%= @companies.find(@departure.idCompany).name %></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="pull-left">
+          <label>Price:</label><h4><%= @departure.price %></h4>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="pull-left">
+          <label>Your name:</label><h4><%= current_user.name %></h4>
+        </div>
+        <div class="pull-right">
+          <label>Your email:</label><h4><%= current_user.email %></h4>
+        </div>
+
+      </div>
+      <div class="text-center">
+        <%= simple_form_for @card, :url => buy_path(@departure), :html => { :method => "post" } do |f| %>
+          <%= f.error_notification %>
+          <div class="form-inputs">
+            <%= f.input :idUser, :as => :hidden, :input_html => { :value => current_user.id } %>
+            <%= f.input :cardNumber,required: true, autofocus:true, as: :integer, label: "Your card number", min_length:13,max_length:19%>
+          </div>
+          <div class="form-actions">
+            <%= f.button :submit, "Buy",:class => "btn btn-success" %>
+          </div>
+        <% end %>
+      </div>
   </div>
 </div>

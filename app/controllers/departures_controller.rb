@@ -1,7 +1,7 @@
 class DeparturesController < ApplicationController
   before_action :find_departure, only: [:show,:update,:edit,:destroy]
   def index
-    @departures = Departure.all
+    @departures = Departure.where("numberOfTickets > 0")
     @companies = Company.all
   end
   def new
@@ -21,6 +21,7 @@ class DeparturesController < ApplicationController
   end
   def show
     if user_signed_in?
+      @card = Card.new
       @companies = Company.all
       @departure = Departure.find(params[:id])
     else
@@ -35,18 +36,24 @@ class DeparturesController < ApplicationController
     end
   end
   def buy
-    @departure = Departure.find(params[:format])
-    if @departure.numberOfTickets > 0
-      numberOfTickets = @departure.numberOfTickets
-      numberOfTickets -=1
-      @history = History.create(idUser:current_user.id,idDeparture:@departure.id)
-      if @departure.update(numberOfTickets:numberOfTickets) and @history.save
-        redirect_to root_path
+    if user_signed_in?
+      @departure = Departure.find(params[:format])
+      if @departure.numberOfTickets > 0
+        @card = Card.new(card_params)
+        numberOfTickets = @departure.numberOfTickets
+        numberOfTickets -=1
+        atributes = {"idUser" => current_user.id,"idDeparture" => @departure.id}
+        @history = History.new(atributes)
+        if @departure.update(numberOfTickets:numberOfTickets) and @history.save and @card.save
+          redirect_to root_path
+        else
+          render "show"
+        end
       else
-        render "show"
+        render "error"
       end
     else
-      render "error"
+      redirect_to root_path
     end
   end
   def destroy
@@ -58,7 +65,6 @@ class DeparturesController < ApplicationController
         redirect_to departure_path(@departure)
       else
         render "edit"
-
       end
   end
 
@@ -71,5 +77,8 @@ class DeparturesController < ApplicationController
     end
     def history_params
       params.require(:history).permit(:idUser,:idDeparture)
+    end
+    def card_params
+      params.require(:card).permit(:idUser,:cardNumber)
     end
 end
