@@ -40137,3 +40137,1325 @@ Processing by DeparturesController#index as HTML
 Completed 200 OK in 88ms (Views: 83.7ms | ActiveRecord: 2.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:28:15 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:15.980403')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:15.980403') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 98ms (Views: 91.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:28:17 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:17.066351')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:17.066351') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 111ms (Views: 106.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/departures/1" for 127.0.0.1 at 2018-06-15 18:28:20 +0000
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:99
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:33
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:35
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:36
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 93ms (Views: 81.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/buy.1" for 127.0.0.1 at 2018-06-15 18:28:25 +0000
+Processing by DeparturesController#buy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P1PF/J6Mkk7RQdVe3Ss5L9QJbcBIuCyiEq26mo/9CaQKROpdu3jfuojp6CD1hQqn8EZNOQSOCASMQx/SNoW4Bw==", "card"=>{"idUser"=>"1", "cardNumber"=>"123123123123123"}, "commit"=>"Buy"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:51
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:52
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[36mDeparture Update (0.3ms)[0m  [1m[33mUPDATE "departures" SET "numberOfTickets" = ?, "updated_at" = ? WHERE "departures"."id" = ?[0m  [["numberOfTickets", 19], ["updated_at", "2018-06-15 18:28:25.090885"], ["id", 1]]
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[35m (173.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[36mHistory Create (0.3ms)[0m  [1m[32mINSERT INTO "histories" ("idUser", "idDeparture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idUser", 1], ["idDeparture", 1], ["created_at", "2018-06-15 18:28:25.266984"], ["updated_at", "2018-06-15 18:28:25.266984"]]
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[35m (53.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("idUser", "cardNumber", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idUser", 1], ["cardNumber", "123123123123123"], ["created_at", "2018-06-15 18:28:25.323531"], ["updated_at", "2018-06-15 18:28:25.323531"]]
+  ↳ app/controllers/departures_controller.rb:59
+  [1m[35m (50.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:59
+Redirected to http://localhost:3000/
+Completed 302 Found in 296ms (ActiveRecord: 279.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:28:25 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:25.386942')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:25.386942') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 80ms (Views: 76.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-06-15 18:28:27 +0000
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:6
+  [1m[36mHistory Load (0.2ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."idUser" = ?[0m  [["idUser", 1]]
+  ↳ app/controllers/histories_controller.rb:9
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:14
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:14
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/histories/index.html.erb:22
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/histories/index.html.erb:22
+  Rendered histories/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 129ms (Views: 121.3ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/histories/4" for 127.0.0.1 at 2018-06-15 18:28:30 +0000
+Processing by HistoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J8toj1gIXW5po/Rj4LQEdzgjpa3kQrFafCHRe3++Zct75KDeO+9hpRH7jh0nQ//Pd6TGJKRAwTFkT4YX6YyHow==", "id"=>"4"}
+  [1m[36mHistory Load (0.2ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" WHERE "histories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:36
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/histories_controller.rb:27
+  [1m[36mDeparture Update (0.8ms)[0m  [1m[33mUPDATE "departures" SET "numberOfTickets" = ?, "updated_at" = ? WHERE "departures"."id" = ?[0m  [["numberOfTickets", 20], ["updated_at", "2018-06-15 18:28:30.986671"], ["id", 1]]
+  ↳ app/controllers/histories_controller.rb:27
+  [1m[35m (124.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/histories_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/histories_controller.rb:28
+  [1m[36mHistory Destroy (1.2ms)[0m  [1m[31mDELETE FROM "histories" WHERE "histories"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/histories_controller.rb:28
+  [1m[35m (59.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/histories_controller.rb:28
+Redirected to http://localhost:3000/histories
+Completed 302 Found in 200ms (ActiveRecord: 187.0ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-06-15 18:28:31 +0000
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:6
+  [1m[36mHistory Load (0.2ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."idUser" = ?[0m  [["idUser", 1]]
+  ↳ app/controllers/histories_controller.rb:9
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:14
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mCompany Load (1.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/histories/index.html.erb:22
+  Rendered histories/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 109ms (Views: 96.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:28:33 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:33.020313')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:33.020313') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 108ms (Views: 103.4ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-06-15 18:28:35 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"11qCx2jpALVK2ZvOyeuCjcX/jq9XpHGDd6xBZqLD1umLdUqWCw48fjKB4bAOHHk1injtJhemAehvwhYKNPE0gQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:28:35 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:35.310307')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:28:35.310307') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 20:48:23 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:23.588413')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:23.588413') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 315ms (Views: 300.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-15 20:48:27 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 134ms (Views: 60.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-15 18:48:33 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WEp3Dnd3ytY8b1iTyYa74HtokL/Sag9X/XyCNl58QNF5TuHvT2oMuQZDvMYuYbDnT2fepyyGdCsfRWNCnM6uHQ==", "user"=>{"email"=>"mateMatic@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matematic@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-15 18:48:33.241133"], ["last_sign_in_at", "2018-06-15 18:11:01.541186"], ["sign_in_count", 3], ["updated_at", "2018-06-15 18:48:33.244720"], ["id", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (69.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 265ms (ActiveRecord: 70.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:48:33 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:33.336856')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:33.336856') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 104ms (Views: 100.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-06-15 18:48:36 +0000
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:6
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."idUser" = ?[0m  [["idUser", 1]]
+  ↳ app/controllers/histories_controller.rb:9
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:14
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/histories/index.html.erb:22
+  Rendered histories/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 99ms (Views: 63.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:48:37 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:37.791883')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:37.791883') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 106ms (Views: 100.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/departures/2" for 127.0.0.1 at 2018-06-15 18:48:39 +0000
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:34
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:36
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:37
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 106ms (Views: 87.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/buy.2" for 127.0.0.1 at 2018-06-15 18:48:42 +0000
+Processing by DeparturesController#buy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/5SA2O/9kj6q0pJKwz1Rw8sK2Wm0EXb3B9wYkq3r+bVT4aWwaKzJLpvttk1XFYsNozvlFFNqw9tZtIibG3v79w==", "card"=>{"idUser"=>"1", "cardNumber"=>"213123123123123"}, "commit"=>"Buy"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:52
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[36mDeparture Update (0.5ms)[0m  [1m[33mUPDATE "departures" SET "numberOfTickets" = ?, "updated_at" = ? WHERE "departures"."id" = ?[0m  [["numberOfTickets", 29], ["updated_at", "2018-06-15 18:48:42.510305"], ["id", 2]]
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (200.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[36mHistory Create (0.3ms)[0m  [1m[32mINSERT INTO "histories" ("idUser", "idDeparture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idUser", 1], ["idDeparture", 2], ["created_at", "2018-06-15 18:48:42.716797"], ["updated_at", "2018-06-15 18:48:42.716797"]]
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (73.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("idUser", "cardNumber", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idUser", 1], ["cardNumber", "213123123123123"], ["created_at", "2018-06-15 18:48:42.794536"], ["updated_at", "2018-06-15 18:48:42.794536"]]
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (95.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+Redirected to http://localhost:3000/
+Completed 302 Found in 388ms (ActiveRecord: 372.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:48:42 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:42.905345')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:42.905345') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 64ms (Views: 59.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-06-15 18:48:44 +0000
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:6
+  [1m[36mHistory Load (0.3ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."idUser" = ?[0m  [["idUser", 1]]
+  ↳ app/controllers/histories_controller.rb:9
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:14
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:14
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/histories/index.html.erb:22
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/histories/index.html.erb:22
+  Rendered histories/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 77ms (Views: 70.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/histories/5" for 127.0.0.1 at 2018-06-15 18:48:48 +0000
+Processing by HistoriesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gb8r3aFvdOcymIL959BCIEvApmeD1FymC+7GEtHGUq65WlMFMDIujqDj/WV7mriZAWa6OGVDb4E1MCTZkZm8zg==", "id"=>"5"}
+  [1m[36mHistory Load (0.2ms)[0m  [1m[34mSELECT  "histories".* FROM "histories" WHERE "histories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:36
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:24
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/histories_controller.rb:27
+  [1m[36mDeparture Update (0.4ms)[0m  [1m[33mUPDATE "departures" SET "numberOfTickets" = ?, "updated_at" = ? WHERE "departures"."id" = ?[0m  [["numberOfTickets", 30], ["updated_at", "2018-06-15 18:48:48.064285"], ["id", 2]]
+  ↳ app/controllers/histories_controller.rb:27
+  [1m[35m (72.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/histories_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/histories_controller.rb:28
+  [1m[36mHistory Destroy (0.7ms)[0m  [1m[31mDELETE FROM "histories" WHERE "histories"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/histories_controller.rb:28
+  [1m[35m (65.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/histories_controller.rb:28
+Redirected to http://localhost:3000/histories
+Completed 302 Found in 149ms (ActiveRecord: 139.4ms)
+
+
+Started GET "/histories" for 127.0.0.1 at 2018-06-15 18:48:48 +0000
+Processing by HistoriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:6
+  [1m[36mHistory Load (0.6ms)[0m  [1m[34mSELECT "histories".* FROM "histories" WHERE "histories"."idUser" = ?[0m  [["idUser", 1]]
+  ↳ app/controllers/histories_controller.rb:9
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/histories_controller.rb:14
+  Rendering histories/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/histories/index.html.erb:22
+  Rendered histories/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 72ms (Views: 62.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:48:49 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:49.856276')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:48:49.856276') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 102ms (Views: 97.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/departures/1" for 127.0.0.1 at 2018-06-15 18:48:53 +0000
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:34
+  [1m[36mCACHE Departure Load (0.0ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:36
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:37
+  Rendering departures/show.html.erb within layouts/application
+  Rendered departures/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/buy.1" for 127.0.0.1 at 2018-06-15 18:49:01 +0000
+Processing by DeparturesController#buy as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sAEI9KR45fmeC6mWUsRiVUXQGb/dIQIugzlYBGMBlDuzCguqR50thRn81AuiG4bqb3V6ANmiiizK0w/wgXEAFA==", "card"=>{"idUser"=>"1", "cardNumber"=>"123123123123222"}, "commit"=>"Buy"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:52
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[36mDeparture Update (0.5ms)[0m  [1m[33mUPDATE "departures" SET "numberOfTickets" = ?, "updated_at" = ? WHERE "departures"."id" = ?[0m  [["numberOfTickets", 19], ["updated_at", "2018-06-15 18:49:01.503439"], ["id", 1]]
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (194.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[36mHistory Create (0.4ms)[0m  [1m[32mINSERT INTO "histories" ("idUser", "idDeparture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idUser", 1], ["idDeparture", 1], ["created_at", "2018-06-15 18:49:01.702361"], ["updated_at", "2018-06-15 18:49:01.702361"]]
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (62.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("idUser", "cardNumber", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["idUser", 1], ["cardNumber", "123123123123222"], ["created_at", "2018-06-15 18:49:01.768683"], ["updated_at", "2018-06-15 18:49:01.768683"]]
+  ↳ app/controllers/departures_controller.rb:60
+  [1m[35m (50.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:60
+Redirected to http://localhost:3000/
+Completed 302 Found in 326ms (ActiveRecord: 308.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:49:01 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:01.837472')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.5ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:01.837472') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:29
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-06-15 18:49:04 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TMW1wQ7g/ynWXMQBJFhBNMfVWMW7/OPPeD9Yhq/qIIx0IM0Zn72lQEQnu5m4EruNjXNEml1r0OhG4bpN77XO7A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:49:04 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:04.759564')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:04.759564') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/companies/sign_up" for 127.0.0.1 at 2018-06-15 18:49:06 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 81ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/companies/sign_in" for 127.0.0.1 at 2018-06-15 18:49:10 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/companies/sign_in" for 127.0.0.1 at 2018-06-15 18:49:17 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0WXibjOhiFqzivUmAIj0o5gnXoZ70Qw6L7LBio0zbelQ9aiLVnZEIbXnffzo6Dc+5QD4nOb/McjQKjXCm2MfQ==", "company"=>{"email"=>"prometMakarska@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."email" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["email", "prometmakarska@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mCompany Update (0.7ms)[0m  [1m[33mUPDATE "companies" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "companies"."id" = ?[0m  [["current_sign_in_at", "2018-06-15 18:49:17.632087"], ["sign_in_count", 2], ["updated_at", "2018-06-15 18:49:17.633364"], ["id", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (72.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 250ms (ActiveRecord: 73.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:49:17 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:17.728507')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:17.728507') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.9ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/departures/1" for 127.0.0.1 at 2018-06-15 18:49:21 +0000
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vhG3ddaRglRYd2jPsnGLz6zsVAARaTftlhUpHZLWmTsodVQDE7RjN2J83vfJaK/xLimKoo6Vm779r+27RlLD7A==", "id"=>"1"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories" WHERE "histories"."idDeparture" = ?[0m  [["idDeparture", 1]]
+  ↳ app/controllers/departures_controller.rb:75
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:49:21 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:21.892496')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:49:21.892496') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 71ms (Views: 67.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:51:08 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:51:08.517569')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:51:08.517569') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.8ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (50.2ms)
+Completed 200 OK in 105ms (Views: 97.7ms | ActiveRecord: 3.9ms)
+
+
+Started DELETE "/departures/1" for 127.0.0.1 at 2018-06-15 18:51:11 +0000
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MTB3AGUkBwiSSgoVvsyMxnw7dY8PCiI17wVnStpyoKOnVJR2oAHma6hBvC3F1aj4/v6rLZD2jmaEv6PsDvb6dA==", "id"=>"1"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories" WHERE "histories"."idDeparture" = ?[0m  [["idDeparture", 1]]
+  ↳ app/controllers/departures_controller.rb:75
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:51:11 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:51:11.942904')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (1.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:51:11.942904') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 103ms (Views: 96.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/departures/1/edit" for 127.0.0.1 at 2018-06-15 18:51:15 +0000
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:44
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (66.6ms)
+  Rendered departures/edit.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 154ms (Views: 149.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/departures/1" for 127.0.0.1 at 2018-06-15 18:51:20 +0000
+Processing by DeparturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1LYTsbvBy8PVxLBsUKF2l2Xj9L4V6s5a4MKowMlxdovSkPiQQi3vDimN7Iqj033FU/1Bw2e5O5y4W97iNx5iYg==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"20", "departureDate(4i)"=>"14", "departureDate(5i)"=>"00", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"20", "arrival(4i)"=>"19", "arrival(5i)"=>"00", "numberOfTickets"=>"19", "price"=>"202", "idCompany"=>"1"}, "commit"=>"Update Departure", "id"=>"1"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories" WHERE "histories"."idDeparture" = ?[0m  [["idDeparture", 1]]
+  ↳ app/controllers/departures_controller.rb:84
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:51:20 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:51:20.340488')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:51:20.340488') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 70ms (Views: 64.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-15 18:51:32 +0000
+Processing by DeparturesController#new as HTML
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:12
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (28.0ms)
+  Rendered departures/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 114ms (Views: 111.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-15 18:51:51 +0000
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mltW2jhJq2smzsy4updqTiqZY8LCOzHNnhFsGw1FronznGmHVy1bCL9j/K6e+jlDpk30xAQmCgdsd7RnlInrlQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"9", "departureDate(3i)"=>"15", "departureDate(4i)"=>"20", "departureDate(5i)"=>"51", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"15", "arrival(4i)"=>"20", "arrival(5i)"=>"51", "numberOfTickets"=>"1", "price"=>"1", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+No template found for DeparturesController#create, rendering head :no_content
+Completed 204 No Content in 44ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-15 18:52:04 +0000
+Processing by DeparturesController#new as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:12
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (30.9ms)
+  Rendered departures/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-15 18:52:20 +0000
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dpn+TOi81M2nFToVh/PcTyX8Y3z0oPzexk1BpGzdqF2Y/R06LZk1rp0ejC386vhxpzm93mtcUI2t94UCuFnyig==", "departure"=>{"from"=>"Zagreb", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"15", "departureDate(4i)"=>"20", "departureDate(5i)"=>"52", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"15", "arrival(4i)"=>"20", "arrival(5i)"=>"52", "numberOfTickets"=>"0", "price"=>"1", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+No template found for DeparturesController#create, rendering head :no_content
+Completed 204 No Content in 37ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:52:28 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:52:28.167379')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.4ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:52:28.167379') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (1.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 89ms (Views: 83.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-15 18:52:30 +0000
+Processing by DeparturesController#new as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:12
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (50.2ms)
+  Rendered departures/new.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 116ms (Views: 112.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-15 18:53:11 +0000
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xmiQ83OwUL5aolUcGhAHHrVhFcHrd8tl+XqL+T3cHsivr6+uHNSg3cMPZQo+fVQTObWCxy1q8K8LHFOFpBBb1A==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"15", "departureDate(4i)"=>"20", "departureDate(5i)"=>"52", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"15", "arrival(4i)"=>"20", "arrival(5i)"=>"52", "numberOfTickets"=>"0", "price"=>"1", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+Redirected to http://localhost:3000/departures/new
+Completed 302 Found in 14ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-15 18:53:11 +0000
+Processing by DeparturesController#new as HTML
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:12
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (17.8ms)
+  Rendered departures/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 92ms (Views: 74.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-15 18:53:25 +0000
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFEaZ500J4CDm8fPBP/2GVp0LAbIazVa34+A4j0SdBQuNfkRWBHG47mQcfd/5tIn2LHypFeXmQm0NURE6ZYuww==", "departure"=>{"from"=>"Zagreb", "to"=>"Split", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"15", "departureDate(4i)"=>"20", "departureDate(5i)"=>"53", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"15", "arrival(4i)"=>"20", "arrival(5i)"=>"53", "numberOfTickets"=>"1", "price"=>"0", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+Redirected to http://localhost:3000/departures/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-15 18:53:25 +0000
+Processing by DeparturesController#new as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:12
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (25.2ms)
+  Rendered departures/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 75ms (Views: 72.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/departures" for 127.0.0.1 at 2018-06-15 18:53:37 +0000
+Processing by DeparturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ichYzF54L3c/DHev9K0v5/BwOq2lr787mhEohfLoUOgfrLu6m13OFAUHwZePtAvZcrXkDzpTE2jxq+wjJmwKPw==", "departure"=>{"from"=>"Zagreb", "to"=>"Split", "departureDate(1i)"=>"2019", "departureDate(2i)"=>"6", "departureDate(3i)"=>"15", "departureDate(4i)"=>"20", "departureDate(5i)"=>"53", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"15", "arrival(4i)"=>"20", "arrival(5i)"=>"53", "numberOfTickets"=>"10", "price"=>"10", "idCompany"=>"1"}, "commit"=>"Create Departure"}
+Redirected to http://localhost:3000/departures/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/departures/new" for 127.0.0.1 at 2018-06-15 18:53:37 +0000
+Processing by DeparturesController#new as HTML
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:12
+  Rendering departures/new.html.erb within layouts/application
+  Rendered departures/_form.html.erb (30.9ms)
+  Rendered departures/new.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:53:40 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:40.051820')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:40.051820') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.6ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 90ms (Views: 84.9ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/departures/1" for 127.0.0.1 at 2018-06-15 18:53:44 +0000
+Processing by DeparturesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NQKoW5GaZdiunVHok/UcPei/ikNpTwJRUascLMrSKO6jZkstVL+Eu5SW59Do7DgDanpU4fazrgI6EdiKHlZyOQ==", "id"=>"1"}
+  [1m[36mDeparture Load (0.3ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories" WHERE "histories"."idDeparture" = ?[0m  [["idDeparture", 1]]
+  ↳ app/controllers/departures_controller.rb:75
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:53:44 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:44.092714')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.5ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:44.092714') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 68ms (Views: 64.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/departures/2/edit" for 127.0.0.1 at 2018-06-15 18:53:45 +0000
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:44
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (32.2ms)
+  Rendered departures/edit.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 105ms (Views: 100.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/departures/2" for 127.0.0.1 at 2018-06-15 18:53:48 +0000
+Processing by DeparturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NOPmkGyz6sHaKQ7T6bwLalWJGid+jTog2/B1eoj1eiVxB7TJ7u5AzGZZC7mr5rrm1r1mJgMKQTN3t0MdQSx70A==", "departure"=>{"from"=>"Zagreb", "to"=>"Split", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"20", "departureDate(4i)"=>"14", "departureDate(5i)"=>"06", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"20", "arrival(4i)"=>"19", "arrival(5i)"=>"00", "numberOfTickets"=>"30", "price"=>"5", "idCompany"=>"1"}, "commit"=>"Update Departure", "id"=>"2"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories" WHERE "histories"."idDeparture" = ?[0m  [["idDeparture", 2]]
+  ↳ app/controllers/departures_controller.rb:84
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/departures_controller.rb:88
+  [1m[36mDeparture Update (0.7ms)[0m  [1m[33mUPDATE "departures" SET "departureDate" = ?, "updated_at" = ? WHERE "departures"."id" = ?[0m  [["departureDate", "2018-06-20 12:06:00"], ["updated_at", "2018-06-15 18:53:48.940392"], ["id", 2]]
+  ↳ app/controllers/departures_controller.rb:88
+  [1m[35m (65.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/departures_controller.rb:88
+Redirected to http://localhost:3000/departures/2
+Completed 302 Found in 79ms (ActiveRecord: 66.9ms)
+
+
+Started GET "/departures/2" for 127.0.0.1 at 2018-06-15 18:53:49 +0000
+Processing by DeparturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:53:49 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:49.035015')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.9ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:49.035015') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 104ms (Views: 100.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/departures/1/edit" for 127.0.0.1 at 2018-06-15 18:53:53 +0000
+Processing by DeparturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:44
+  Rendering departures/edit.html.erb within layouts/application
+  Rendered departures/_form.html.erb (60.1ms)
+  Rendered departures/edit.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 124ms (Views: 118.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/departures/1" for 127.0.0.1 at 2018-06-15 18:53:56 +0000
+Processing by DeparturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/UzrSB/8CMycxZtGENYyBaMYnNrZqUEj8Q9vl8GRnhd09iM2ZPU7s46SovrMVOaIJLXDhk1UMLXXUucoWlSkQ==", "departure"=>{"from"=>"Split", "to"=>"Zagreb", "departureDate(1i)"=>"2018", "departureDate(2i)"=>"6", "departureDate(3i)"=>"20", "departureDate(4i)"=>"14", "departureDate(5i)"=>"00", "arrival(1i)"=>"2018", "arrival(2i)"=>"6", "arrival(3i)"=>"20", "arrival(4i)"=>"19", "arrival(5i)"=>"15", "numberOfTickets"=>"19", "price"=>"20", "idCompany"=>"1"}, "commit"=>"Update Departure", "id"=>"1"}
+  [1m[36mDeparture Load (0.1ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE "departures"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/departures_controller.rb:101
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "histories" WHERE "histories"."idDeparture" = ?[0m  [["idDeparture", 1]]
+  ↳ app/controllers/departures_controller.rb:84
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:53:56 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:56.478051')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (1.4ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:56.478051') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.3ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:32
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.7ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 90ms (Views: 82.9ms | ActiveRecord: 3.6ms)
+
+
+Started DELETE "/companies/sign_out" for 127.0.0.1 at 2018-06-15 18:53:58 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JqD7F7C6W3uJ0ACViKHdK1MqlyR0qsMQbzEg3YzMAEKwxBhhdZ+6GLPbtq3zuPkV0e9JhutWb0MEi+R7WEhalQ=="}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? ORDER BY "companies"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/frina/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-15 18:53:58 +0000
+Processing by DeparturesController#index as HTML
+  Rendering departures/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:58.152878')[0m
+  ↳ app/views/departures/index.html.erb:4
+  [1m[36mDeparture Load (0.2ms)[0m  [1m[34mSELECT  "departures".* FROM "departures" WHERE (numberOfTickets > 0) AND (departureDate >= '2018-06-15 18:53:58.152878') LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/departures/index.html.erb:19
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCompany Load (0.4ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  [1m[36mCACHE Company Load (0.0ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/departures/index.html.erb:27
+  Rendered departures/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 83ms (Views: 80.1ms | ActiveRecord: 1.8ms)
+
+

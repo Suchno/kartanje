@@ -19,13 +19,14 @@ class DeparturesController < ApplicationController
   def create
       @departure = Departure.new(departure_params)
       if(@departure.departureDate >= @departure.arrival or @departure.numberOfTickets <= 0 or @departure.price <= 0)
-        render "error",:locals => {:errorType =>  "c"}
-        return
-      end
-      if @departure.save
-        redirect_to root_path
+        flash[:danger] = "Your date of departure must be larger than you arrival date. Your price must be greater then 0 so as your number of tickets. Try again :)"
+        redirect_to new_departure_path
       else
-        render "new"
+        if @departure.save
+          redirect_to root_path
+        else
+          render "new"
+        end
       end
   end
   #- action to represent what user is trying to buy. If user is not logined it will redirect him to root_path
@@ -63,7 +64,7 @@ class DeparturesController < ApplicationController
           render "show"
         end
       else
-        render "error",:locals => {:errorType =>  "n"}
+        flash[:danger] = "You cannot buy a ticket couse there are 0 tickets left :(."
       end
     else
       redirect_to root_path
@@ -72,22 +73,23 @@ class DeparturesController < ApplicationController
   # action used by companies when they want to delete their departure. Only possible if users have not bought any tickets.
   def destroy
     if( @histories = History.where(idDeparture: params[:id])).count > 0
-      render "error",:locals => {:errorType =>  "d"}
-      return
+      flash[:danger] = "You cannot delete departure for which people have already have bought tickets :(."
+    else
+      @departure.destroy
     end
-    @departure.destroy
     redirect_to root_path
   end
   # action used by companies when they want to edit their departure. Only possible if users have not bought any tickets.
   def update
     if( @histories = History.where(idDeparture: params[:id])).count > 0
-      render "error",:locals => {:errorType =>  "b"}
-      return
-    end
-    if @departure.update(departure_params)
-      redirect_to departure_path(@departure)
+      flash[:danger] = "You cannot edit departure for which people have already have bought tickets :(."
+      redirect_to root_path
     else
-      render "edit"
+      if @departure.update(departure_params)
+        redirect_to departure_path(@departure)
+      else
+        render "edit"
+      end
     end
   end
   #private methods for getting entered parameters, and find_departure used before_action so that we have actual departure that is shown.
